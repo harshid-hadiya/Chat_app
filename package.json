@@ -160,7 +160,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Backend/server.js",
+    "start": "node Backend/server.js",
     "build":"npm install && npm install --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [],
