@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Space Grotesk",Arial, Helvetica, sans-serif;
+}
+body{
+    background: #000;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    
+}

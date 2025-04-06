@@ -1,0 +1,68 @@
+.drawercontainer{
+    position: absolute;
+    height: 100vh;
+    width: 30vw;
+    background: rgba(154, 154, 154, 0.652); /* Semi-transparent */
+    backdrop-filter: blur(10px);
+    top: 0px;
+    left: -30vw;
+    padding: 26px 25px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+.drawercontainer.opendrawer{
+    left: 0!important;
+}
+.drawerheader{
+    font-size: 1.75vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.closedrawer{
+    width: 15px;
+    height: 15px;
+}
+.closedrawer:hover{
+    cursor: pointer;
+}
+.drawerSearch{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-bottom: 12px;
+}
+.drawerSearch > input{
+    border-radius: 12px 0px 0px 12px;
+
+}
+.drawerSearch > input::placeholder{
+    font-size: 13px;
+    color: rgb(196, 194, 194);
+}
+.drawerSearch>button{
+    all: unset;
+    padding: 10px 11px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0px 12px 12px 0px;
+}
+.wraperofsearchinguser{
+    overflow-y: scroll;
+    height: 80%;
+}
+.wraperofsearchinguser::-webkit-scrollbar{
+    display: none;
+}
+@media only screen and (max-width:810px) 
+{
+    .drawerheader{
+        font-size: 25px;
+    }
+
+}
+@media only screen and (max-width:1191px){
+    .drawercontainer{
+      width: 350px;
+      left: -350px;
+    }
+}

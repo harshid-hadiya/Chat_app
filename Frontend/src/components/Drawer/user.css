@@ -1,0 +1,14 @@
+.user1{
+    background: #b6b3b3 !important;
+}
+.name1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.searchuserimg{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}

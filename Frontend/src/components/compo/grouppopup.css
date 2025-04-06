@@ -1,0 +1,11 @@
+.containerofgroup{
+    position: fixed;
+    width: 100px;
+    height:100px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}

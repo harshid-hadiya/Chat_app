@@ -1,0 +1,110 @@
+.rightcontainer {
+  flex: 4;
+  background: rgba(90, 88, 88, 0.87);
+  padding: 18px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 87vh;
+  overflow: hidden;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.eye-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.eye-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.eye-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.no-chat-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .chat-name {
+    font-size: 1.2rem;
+  }
+
+  .eye-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .eye-button img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media only screen and (max-width: 1113px) {
+  .rightcontainer {
+    padding: 15px;
+    height: 87vh;
+    overflow: hidden;
+  }
+
+  .right-header {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+
+  .chat-name {
+    font-size: 1.1rem;
+  }
+
+  .eye-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .eye-button img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .no-chat-selected {
+    font-size: 1rem;
+  }
+}

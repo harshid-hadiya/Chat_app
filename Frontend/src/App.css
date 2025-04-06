@@ -1,0 +1,161 @@
+/* General Page Styling */
+.loginpage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  /* background-image: url("/public/images/gray-abstract-wireframe-technology-background.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Login Box */
+.loginbox {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+ 
+}
+
+/* Header */
+.loginheader {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.buttonofsignup {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.loginButton,
+.signupButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+/* Form Styling */
+.loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+  
+label {
+  color: white;
+  font-size: 14px;
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Submit Button */
+.submitButton {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.submitButton:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.urlimg{
+  max-height: 153px;
+  object-fit:scale-down;
+}
+
+.file
+{
+  display: none;
+}
+.uploadimg{
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px dashed gray;
+  font-size: 22px;
+  transition: all 0.2s ease-in-out;
+}
+.uploadimg:hover{
+  border: 1px dashed rgb(51, 148, 233);
+}
+
+@media only screen and (max-width:506px) {
+  .loginbox{
+    margin: 12px;
+  }
+}
+/* this animation for the loader */
+.loaderbutton{
+  margin-top: 15px;
+  padding: 5px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.loader {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid #f5f2f2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
