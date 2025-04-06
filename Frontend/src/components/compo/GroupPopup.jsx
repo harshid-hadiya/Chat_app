@@ -72,7 +72,7 @@ const GroupPopup = ({ isVisible, onClose }) => {
         };
 
         const { data } = await axios.get(
-          `http://localhost:8900/api/user/searc?search=${searchTerm}`,
+          `https://chat-app-umd8.onrender.com/api/user/searc?search=${searchTerm}`,
           config
         );
 
@@ -113,7 +113,7 @@ const GroupPopup = ({ isVisible, onClose }) => {
 
     try {
       const response = await axios.put(
-        "http://localhost:8900/api/chat/addMemb",
+        "https://chat-app-umd8.onrender.com/api/chat/addMemb",
         { groupId: right._id, memberId: user._id },
         config
       );
@@ -139,7 +139,7 @@ const GroupPopup = ({ isVisible, onClose }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8900/api/chat/removeMemb`,
+        `https://chat-app-umd8.onrender.com/api/chat/removeMemb`,
         { groupId: right._id, memberId: userId },
         config
       );
@@ -165,7 +165,7 @@ const GroupPopup = ({ isVisible, onClose }) => {
       };
 
       const { data } = await axios.put(
-        "http://localhost:8900/api/chat/rename",
+        "https://chat-app-umd8.onrender.com/api/chat/rename",
         {
           name: groupName,
           groupId: right._id,
@@ -193,7 +193,7 @@ const GroupPopup = ({ isVisible, onClose }) => {
 
       // Using the remove member endpoint to remove the current user
       await axios.put(
-        `http://localhost:8900/api/chat/removeMemb`,
+        `https://chat-app-umd8.onrender.com/api/chat/removeMemb`,
         {
           groupId: right._id,
           memberId: currentUser.user_id,

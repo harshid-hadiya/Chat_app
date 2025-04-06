@@ -27,7 +27,7 @@ const Drawer = ({ isdrwaer, setisdrawer }) => {
     };
     try {
       const response = await axios.get(
-        `http://localhost:8900/api/user/searc?search=${emailname}`,
+        `https://chat-app-umd8.onrender.com/api/user/searc?search=${emailname}`,
         config
       );
       console.log(response.data);
@@ -46,7 +46,7 @@ const Drawer = ({ isdrwaer, setisdrawer }) => {
     };
     try {
       const response = await axios.post(
-        `http://localhost:8900/api/chat/`,
+        `https://chat-app-umd8.onrender.com/api/chat/`,
         { userId: id },
         config
       );

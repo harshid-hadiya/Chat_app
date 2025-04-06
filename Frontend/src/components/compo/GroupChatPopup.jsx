@@ -37,7 +37,7 @@ const GroupChatPopup = ({ isVisible, onClose, onCreate }) => {
         };
 
         const { data } = await axios.get(
-          `http://localhost:8900/api/user/searc?search=${searchTerm}`,
+          `https://chat-app-umd8.onrender.com/api/user/searc?search=${searchTerm}`,
           config
         );
 
@@ -89,7 +89,7 @@ const GroupChatPopup = ({ isVisible, onClose, onCreate }) => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:8900/api/chat/group",
+        "https://chat-app-umd8.onrender.com/api/chat/group",
         {
           name: groupName,
           users: selectedUsers.map((user) => user._id),
@@ -105,12 +105,15 @@ const GroupChatPopup = ({ isVisible, onClose, onCreate }) => {
   };
 
   return (
-    <div className="group-popup-overlay" onClick={(e) => {
-      // Close the popup if the overlay (but not its children) is clicked
-      if (e.target === e.currentTarget) {
-        onClose();
-      }
-    }}>
+    <div
+      className="group-popup-overlay"
+      onClick={(e) => {
+        // Close the popup if the overlay (but not its children) is clicked
+        if (e.target === e.currentTarget) {
+          onClose();
+        }
+      }}
+    >
       <div className="group-popup-content">
         <button className="group-close-btn" onClick={onClose}>
           X

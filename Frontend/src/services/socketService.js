@@ -1,7 +1,7 @@
 import io from "socket.io-client";
 
 // The server URL
-const SERVER_URL = "http://localhost:8900";
+const SERVER_URL = "https://chat-app-umd8.onrender.com";
 
 // Create a single socket instance
 let socket = null;

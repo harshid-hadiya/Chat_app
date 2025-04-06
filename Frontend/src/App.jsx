@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [login, setLogin] = useState(true);
@@ -17,10 +17,8 @@ function App() {
   const navigate = useNavigate();
   let data1 = "";
 
- 
-
   const handleSubmit = async () => {
-    setLoader(true)
+    setLoader(true);
     if (!email || !password) {
       alert("Please enter both email and password.");
       return;
@@ -49,31 +47,27 @@ function App() {
         });
     }
     if (login) {
-        
-        const response = await axios.post(
-          "http://localhost:8900/api/user/login",
-          {
-            email,
-            password,
-          }
-        ).then((response) => {
-          
-          toast.success("Login")
+      const response = await axios
+        .post("https://chat-app-umd8.onrender.com/api/user/login", {
+          email,
+          password,
+        })
+        .then((response) => {
+          toast.success("Login");
           console.log(response.data);
-          let responses=response.data;
-          responses=JSON.stringify(response.data);
-          localStorage.setItem("userInfo",responses);
+          let responses = response.data;
+          responses = JSON.stringify(response.data);
+          localStorage.setItem("userInfo", responses);
           navigate("/chat");
-        }).catch((err) => {
-          toast.warn(err.response.data.message)
-          setLoader(false)
+        })
+        .catch((err) => {
+          toast.warn(err.response.data.message);
+          setLoader(false);
         });
-      
     } else {
       try {
-        
         const response = await axios.post(
-          "http://localhost:8900/api/user/signup",
+          "https://chat-app-umd8.onrender.com/api/user/signup",
           {
             name,
             email,
@@ -81,21 +75,19 @@ function App() {
             profilePic: data1,
           }
         );
-        toast.success("You Registerd successfully")
+        toast.success("You Registerd successfully");
         console.log(response.data);
-        let responses=response.data;
-        responses=JSON.stringify(response.data);
-        localStorage.setItem("userInfo",responses);
+        let responses = response.data;
+        responses = JSON.stringify(response.data);
+        localStorage.setItem("userInfo", responses);
         navigate("/chat");
       } catch (error) {
-        setLoader(false)
+        setLoader(false);
         toast.warn(error.response.data.message);
-        return ;
-        
+        return;
       }
     }
     setLoader(false);
-    
   };
 
   return (
@@ -188,13 +180,14 @@ function App() {
             </>
           )}
 
-          <button className={!loader ? "submitButton":"loaderbutton"} onClick={handleSubmit}>
+          <button
+            className={!loader ? "submitButton" : "loaderbutton"}
+            onClick={handleSubmit}
+          >
             {!loader ? (
               <>{login ? "Log In" : "Sign Up"}</>
             ) : (
-             
-                <div className="loader"></div>
-            
+              <div className="loader"></div>
             )}
           </button>
         </div>

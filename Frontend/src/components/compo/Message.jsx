@@ -16,7 +16,7 @@ const Message = () => {
   const [isProfilePopupVisible, setIsProfilePopupVisible] = useState(false);
   const [typing, setTyping] = useState(false);
   const [istyping, setIstyping] = useState(false);
-  const SERVER_URL = "http://localhost:8900";
+  const SERVER_URL = "https://chat-app-umd8.onrender.com";
 
   // Join group and listen for messages
   useEffect(() => {

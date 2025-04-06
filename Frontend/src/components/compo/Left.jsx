@@ -7,7 +7,15 @@ import GroupChatPopup from "./GroupChatPopup";
 
 const Left = () => {
   const [current, setcurrent] = useState([]);
-  const { user, changeAdd, setchangeAdd, right, setrightusers,notification,setNotification } = getContext();
+  const {
+    user,
+    changeAdd,
+    setchangeAdd,
+    right,
+    setrightusers,
+    notification,
+    setNotification,
+  } = getContext();
   const [isGroupPopupVisible, setIsGroupPopupVisible] = useState(false);
   const [isMobileActive, setIsMobileActive] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 1113);
@@ -95,7 +103,7 @@ const Left = () => {
       };
       try {
         const response = await axios.get(
-          `http://localhost:8900/api/chat/`,
+          `https://chat-app-umd8.onrender.com/api/chat/`,
           config
         );
         console.log(response.data);
