@@ -34,7 +34,7 @@ const createUser = asyncHandler(async (req, res) => {
         user_name: newUser.name,
         user_email: newUser.email,
         pic:newUser.profilePic,
-        jsonToke: getJsonToken(newUser.email,newUser._id),
+        jsonToken: getJsonToken(newUser.email,newUser._id),
       });
   } else {
     res.status(500)
